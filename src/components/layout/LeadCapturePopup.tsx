@@ -55,7 +55,7 @@ export function LeadCapturePopup() {
       <button type="button" className="lead-popup-close" onClick={closePopup} aria-label="Close offer">×</button>
       <p className="lead-popup-kicker"><span aria-hidden="true" /> Before you go deeper</p>
       <h2 id="lead-popup-title">Find the leak.<br /><span>Or take the playbook.</span></h2>
-      <p id="lead-popup-description">Choose the fastest useful next step for your D2C brand.</p>
+      <p id="lead-popup-description">Two ways to find where the money is going. Both free, neither needs your email.</p>
       <div className="lead-popup-actions">
         <a href={auditHref} onClick={closePopup} data-cta-location="timed-popup-audit">
           <span><strong>Get my free leak audit</strong><small>30 minutes · no obligation</small></span>

@@ -8,7 +8,7 @@ export function Contact({ sectionNumber = '06' }: { sectionNumber?: string }) {
         <div className="contact-copy">
           <span className="section-label"><span>{sectionNumber} /</span> Book your audit</span>
           <h2 id="contact-title">What would you<br /><span>fix first?</span></h2>
-          <p>Book a free 30-minute call with Mehul to discuss your store, operations or AI workflows. We’ll review the problem and recommend practical next steps.</p>
+          <p>Book a free 30-minute call with Mehul and bring one problem — the store, the orders, or the marketing. We name the leaks we can see, rank them, and tell you which to close first. You keep that list either way.</p>
           <div className="contact-person">
             <span className="contact-initial" aria-hidden="true">m.</span>
             <div><strong>Speak directly with Mehul.</strong><span>Founder, MlabsGrowth</span></div>

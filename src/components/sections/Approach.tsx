@@ -15,8 +15,8 @@ export function Approach({ focused = false, sectionNumber = '04' }: { focused?: 
               <span>Build it. Test it. Hand it over.</span>
             </h2>
             <p className="section-description">
-              We define the problem, the person who owns it, and the checks that tell us the workflow is ready.
-              Your team reviews the work before rollout.
+              Nothing gets built before you have seen the scope, the cost and who does what. We name the problem,
+              the person who owns it, and the checks that say the workflow is ready. Your team signs off before rollout.
             </p>
           </div>
         </div>

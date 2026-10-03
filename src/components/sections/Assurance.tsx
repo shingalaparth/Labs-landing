@@ -16,8 +16,8 @@ export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { sh
               <span className="muted-heading">is actually worried about.</span>
             </h2>
             <p className="section-description">
-              Not whether it works. Whether you get stuck with it. So here are the 3 commitments in plain terms,
-              before you have to ask for them.
+              Not whether it works. Whether you get stuck with it — an open-ended retainer, a system you cannot run
+              without us, accounts you do not own. Here are the 3 commitments in plain terms, before you have to ask.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function Assurance({ showFitCriteria = true, sectionNumber = '06' }: { sh
           </div>
         </div>}
         <div className="assurance-cta">
-          <p>Not sure which workflow to start with? Bring it to a free 30-minute audit call.</p>
+          <p>Not sure which workflow to start with? That is what the free 30-minute audit is for — we rank them for you.</p>
           <MagneticButton href={site.bookingUrl} variant="primary" strength={0.12} trackingLocation="assurance">
             {primaryCta.label} <ArrowIcon />
           </MagneticButton>

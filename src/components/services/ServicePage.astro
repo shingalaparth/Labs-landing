@@ -38,7 +38,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
             <ul class="service-reducers" aria-label="What happens next">
               {primaryCta.reducers.map(item => <li>{item}</li>)}
             </ul>
-            <p class="service-booking-note">Choose a time on Calendly. The audit is free; a focused implementation pilot is {formatPilotPrice()} USD. <a href={`/offers#${service.slug}`}>See scope and costs ↗</a></p>
+            <p class="service-booking-note">Choose a time on Calendly. The audit is free and you keep the ranked leak list; a focused implementation pilot is {formatPilotPrice()} USD. <a href={`/offers#${service.slug}`}>See scope and costs ↗</a></p>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
       </div>
     </section>
     <section class="section-space growth-evidence" aria-labelledby="service-questions">
-      <div class="shell growth-split"><div><p class="eyebrow-accent">BEFORE YOU BOOK</p><h2 class="section-title" id="service-questions">Know what the call<br />is for.</h2><p>Mehul brings experience from our own brands, Sanskrutibydiorin and Diorin Demifine Jewellery. These are owned businesses, not independent client case studies. Ask to see a relevant workflow before agreeing to implementation.</p></div><div class="growth-card"><h3>Bring your problem and your setup.</h3><p class="growth-note">Share your website, current tools and what is getting missed. We’ll discuss fit and next steps in a free 30-minute call. You do not need to buy every service or commit to paid work.</p><p class="growth-note">Choose a date on Calendly, check the time zone, and add your website and the service you’re interested in to the meeting notes. You’ll confirm the booking there.</p><a class="text-link" href={site.whatsappUrl}>No suitable time? Message Mehul ↗</a></div></div>
+      <div class="shell growth-split"><div><p class="eyebrow-accent">BEFORE YOU BOOK</p><h2 class="section-title" id="service-questions">Know what the call<br />is for.</h2><p>Mehul brings experience from our own brands, Sanskrutibydiorin and Diorin Demifine Jewellery. These are owned businesses, not independent client case studies. Ask to see a relevant workflow before agreeing to implementation.</p></div><div class="growth-card"><h3>Bring your problem and your setup.</h3><p class="growth-note">Share your website, current tools and what keeps getting missed. In a free 30-minute call we discuss fit and next steps. You do not need to buy every service, and if the honest answer is that you do not need us yet, you will hear that instead of a proposal.</p><p class="growth-note">Choose a date on Calendly, check the time zone, and add your website and the service you’re interested in to the meeting notes. You’ll confirm the booking there.</p><a class="text-link" href={site.whatsappUrl}>No suitable time? Message Mehul ↗</a></div></div>
     </section>
     <section class="section-space shell" aria-labelledby="service-search-title">
       <h2 id="service-search-title" class="section-title">{searchContent.heading}</h2>
@@ -102,7 +102,7 @@ const related = serviceRoutes.filter(item => item.slug !== service.slug);
     <section class="related-services section-space" aria-labelledby="related-title">
       <div class="shell">
         <p class="eyebrow-accent">05 / The connected layer</p>
-        <h2 id="related-title">This leak often touches another one.</h2>
+        <h2 id="related-title">This leak is rarely alone.</h2>
         <div class="related-service-grid">
           {related.map(item => (
             <a href={`/services/${item.slug}`}>

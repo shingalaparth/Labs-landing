@@ -10,7 +10,7 @@ export const site = {
   founder: 'Mehul',
   role: 'AI workflows, products and brand services',
   tagline:
-    'Practical AI systems for growing brands. Explore Shopify conversion, order operations, AI workflows and mlabs Skill Manager. Start with a free 30-minute audit.',
+    'We help D2C brands turn booked orders into delivered revenue — Shopify conversion, COD and delivery follow-up, and AI marketing workflows on one connected layer. Start with a free 30-minute audit.',
   location: 'Bengaluru, India',
   email: import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || '',
   url: canonicalOrigin?.origin || (import.meta.env.PROD ? 'https://www.mlabsgrowth.com' : ''),
@@ -43,5 +43,5 @@ export const primaryCta = {
   label: 'Book my free audit call',
   short: 'Book a call',
   /** FUD reducers. These sit directly under the button, never anywhere else. */
-  reducers: ['30-minute call via Calendly', 'No retainer, no obligation', 'Practical next steps to keep'],
+  reducers: ['30-minute call via Calendly', 'No retainer, no obligation', 'A ranked leak list, yours to keep'],
 } as const;

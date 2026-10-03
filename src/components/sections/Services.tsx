@@ -16,8 +16,8 @@ export function Services() {
               <span className="muted-heading">AI that starts with your context.</span>
             </h2>
             <p className="section-description">
-              Start with the work that is slowing you down. Each service has a clear scope, a review with your team,
-              and a handover. Connect more workflows only when the first one is useful.
+              Start with the one costing you the most. Each service has a fixed written scope, a review with your
+              team, and a handover. We add the next module only once the last one is holding.
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export function Services() {
                 <ul aria-label={`${service.navLabel} includes`}>
                   {pillar.modules.map(module => <li key={module.id}>{module.name}</li>)}
                 </ul>
-                <span className="service-route-action">See how it works <ArrowIcon /></span>
+                <span className="service-route-action">See what we fix <ArrowIcon /></span>
               </a>
             );
           })}

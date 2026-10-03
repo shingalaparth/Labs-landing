@@ -84,6 +84,6 @@ const relatedBlog = blogByTool[tool.slug];
       <div>{content.faqs.map((faq) => <details><summary>{faq[0]}<span aria-hidden="true">+</span></summary><p>{faq[1]}</p></details>)}</div>
     </section>
     <section class="section-space shell"><h2 class="section-title">Check the next part of the picture.</h2><div class="seo-help-grid">{relatedTools.map(item => <article class="growth-card"><h3><a class="text-link" href={`/tools/${item.slug}`}>{item.title} ↗</a></h3><p>{item.description}</p></article>)}</div><p class="growth-note">Calculation method and examples maintained by <a class="text-link" href="/about">MlabsGrowth</a>. See the assumptions above before using an estimate.</p></section>
-    <section class="section-space growth-product-band"><div class="shell growth-callout"><div><h2>Found a cost worth investigating?</h2><p>Bring the problem to a free audit. We’ll help you work out which workflow to review first.</p></div><a class="growth-button" href={site.bookingUrl} data-cta-location={`tool-${tool.slug}-audit`}>Discuss the next step ↗</a></div></section>
+    <section class="section-space growth-product-band"><div class="shell growth-callout"><div><h2>Number worse than you expected?</h2><p>Bring it to a free 30-minute audit. We rank the leaks we can see and name the one to close first — the list is yours to keep.</p></div><a class="growth-button" href={site.bookingUrl} data-cta-location={`tool-${tool.slug}-audit`}>Book my free audit call ↗</a></div></section>
   </div>
 </Layout>

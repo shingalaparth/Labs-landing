@@ -5,7 +5,6 @@ import { faqs } from '@/data/commerce';
 import { pageSeo } from '@/data/seo';
 import { metaPixelNoscriptSrc, metaPixelScript } from '@/data/metaPixel';
 import { ownedBrands, ownershipDisclosure } from '@/data/experience';
-import { serviceRoutes } from '@/data/services';
 import { ConversionEvents } from '@/components/providers/ConversionEvents';
 import HiveNavbar from '@/components/layout/HiveNavbar.astro';
 import { Footer } from '@/components/layout/Footer';
@@ -69,12 +68,12 @@ const jsonLd = JSON.stringify({
       <main id="main">
         <section class="hero" aria-labelledby="hero-title">
           <div class="hero-copy">
-            <h1 id="hero-title"><span>More from your store.</span><span>Less work behind it.</span></h1>
-            <p class="hero-subtitle">We improve Shopify conversion, connect order operations, and build AI marketing workflows around your brand.</p>
+            <h1 id="hero-title"><span>More delivered orders.</span><span>Less work behind them.</span></h1>
+            <p class="hero-subtitle">You already pay for the traffic. We work on what happens after the click — the Shopify pages that lose the sale, the COD orders nobody confirms, and the follow-up your team still does by hand.</p>
             <a class="pill-button hero-cta" href={site.bookingUrl} data-cta-location="home-hero">
-              <span>Book a free audit call</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span>
+              <span>Book my free audit call</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span>
             </a>
-            <p class="hero-note">Start with a free 30-minute audit. Get a written scope before paid work.</p>
+            <p class="hero-note">Free 30-minute audit. We rank the leaks we can see — yours to keep.</p>
           </div>
 
         </section>
@@ -89,9 +88,9 @@ const jsonLd = JSON.stringify({
               </div>
               <article class="offer-card">
                 <h3>Don't hire more <em>humans.</em></h3>
-                <p class="offer-description">Your team already brings the strategy, creative judgment, and final approval. Give the repeatable tasks to specialist agents instead of adding another role.</p>
+                <p class="offer-description">A new hire absorbs the repetitive work; it does not remove it. It comes back at the next festive spike, and by then it costs more. Keep your team on judgment, creative and approvals.</p>
                 <div class="offer-signature"><span class="signature-dot" aria-hidden="true"></span>Human-led. Brand-focused.</div>
-                <a class="pill-button offer-cta" href="/services" data-cta-location="home-hire-humans"><span>Explore services</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
+                <a class="pill-button offer-cta" href="/services" data-cta-location="home-hire-humans"><span>See what we fix</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
               </article>
             </div>
             <div class="offer-column">
@@ -103,19 +102,19 @@ const jsonLd = JSON.stringify({
               </div>
               <article class="offer-card">
                 <h3>Hire AI Agents.</h3>
-                <p class="offer-description">Bring in a specialist bee for store conversion, order follow-ups, or marketing workflows. Each agent works from your brand context, and your people review what matters.</p>
+                <p class="offer-description">One agent for store conversion, one for COD and delivery follow-up, one for marketing. They read the same live order data, so nobody asks a customer something they already answered.</p>
                 <div class="offer-signature"><span class="signature-bees" aria-hidden="true"><img src={shopifyBee.src} width="30" height="30" alt="" loading="lazy" /><img src={marketingBee.src} width="30" height="30" alt="" loading="lazy" /><img src={callingBee.src} width="30" height="30" alt="" loading="lazy" /></span>One queen. A connected hive.</div>
                 <a class="pill-button offer-cta" href="#services" data-cta-location="home-hire-agents"><span>Explore agents</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
               </article>
             </div>
           </div>
-          <p class="approach-note">Your people stay in control. The hive helps them get more done.</p>
+          <p class="approach-note">Your people stay in control and approve the work. The hive takes the repetitive part off their day.</p>
         </section>
 
         <section id="services" class="services-section" aria-labelledby="services-title">
-          <p class="eyebrow">ONE QUEEN. ONE CONNECTED TEAM.</p>
+          <p class="eyebrow">ONE BRAIN. ONE SET OF LIVE ORDERS.</p>
           <h2 id="services-title">Meet your new team<br />of AI bees<span class="yellow-period">.</span></h2>
-          <p class="services-intro">Specialist agents, working together around your brand.</p>
+          <p class="services-intro">Each bee owns one job. All of them read the same live order data, which is what makes them worth more together than apart.</p>
           <div class="team-orbit">
             <BeeOrbit />
           </div>
@@ -127,7 +126,7 @@ const jsonLd = JSON.stringify({
             <div class="brain-copy store-copy queen-copy">
               <p class="store-eyebrow">THE QUEEN BEE</p>
               <h3>Your brand's<br />second brain.</h3>
-              <p>Your approved products, customer insights, voice, and past decisions stay in one place. The Queen Bee shares the right context with every specialist.</p>
+              <p>Right now your brand lives in chats, decks and somebody's head, and every new task starts by explaining it again. The Queen Bee keeps your approved products, customers, voice and past decisions in one place, then hands the right context to every specialist.</p>
               <ul class="store-steps" aria-label="How the Queen Bee helps the hive">
                 <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2" /><path d="M9 9h6M9 13h6M9 17h4" /></svg></span><span>Keep approved brand knowledge together</span></li>
                 <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" /><circle cx="5" cy="18" r="2" /><circle cx="19" cy="18" r="2" /><path d="M11 7 6 16m7-9 5 9" /></svg></span><span>Guide every specialist with the right context</span></li>
@@ -155,7 +154,7 @@ const jsonLd = JSON.stringify({
             <div class="brain-copy store-copy">
               <p class="store-eyebrow">SHOPIFY STORE GROWTH</p>
               <h3 id="shopify-growth-title">Turn visits<br />into orders.</h3>
-              <p>We improve the steps between browsing and buying, then measure conversion, order value, and margin.</p>
+              <p>You bought the click. They landed on the wrong product, did not find the proof they needed, and left — then you paid again to bring them back. We work on the steps in between, and judge it on conversion, order value and margin together.</p>
               <ul class="store-steps" aria-label="Where we improve the store">
                 <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5" /><path d="m15 15 5 5" /></svg></span><span>Help shoppers find the right product</span></li>
                 <li><span class="store-step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M9 8h6M9 12h6M9 16h4" /></svg></span><span>Answer product questions before checkout</span></li>
@@ -183,7 +182,7 @@ const jsonLd = JSON.stringify({
             <div class="brain-copy store-copy">
               <p class="store-eyebrow">MARKETING BRAIN</p>
               <h3>Marketing Brain.<br/>For Better Ads.</h3>
-              <p>Marketing Brain brings approved brand knowledge, customer questions, and campaign learning into one working context. It shapes content ideas, creative briefs, and ad angles. Your team reviews the output; managed marketing can put approved campaigns into market.</p>
+              <p>Your marketing should not start from zero every Monday. Marketing Brain keeps approved brand knowledge, real customer questions and what past campaigns taught you in one working context, then turns it into content ideas, creative briefs and ad angles. Your team reviews the output; managed marketing puts approved campaigns into market.</p>
               <a class="brain-link" href="/services/ai-automation">
                 <img src={marketingBee.src} width="1254" height="1254" alt="" loading="lazy" />
                 <span>Marketing Brain</span>
@@ -204,13 +203,13 @@ const jsonLd = JSON.stringify({
         <section class="proof-section" aria-labelledby="proof-title">
           <div class="proof-inner">
             <div class="proof-heading">
-              <h2 id="proof-title">Built from real brand<br />operations.</h2>
+              <h2 id="proof-title">We built this for our<br />own brands first.</h2>
               <p>By <strong><span>Mlabs</span>Growth.</strong></p>
             </div>
             <div class="proof-stats" aria-label="How we work">
-              <div><strong>{ownedBrands.length}</strong><span>owned brands</span></div>
-              <div><strong>{serviceRoutes.length}</strong><span>service areas</span></div>
-              <div><strong>30 min</strong><span>free first audit</span></div>
+              <div><strong>{ownedBrands.length}</strong><span>D2C brands we own and run</span></div>
+              <div><strong>3</strong><span>festive peaks a year</span></div>
+              <div><strong>30 min</strong><span>free audit, yours to keep</span></div>
             </div>
             <div class="proof-gallery" aria-label="Illustrations of our people, agents, and workflows">
               <figure class="proof-image proof-approval">
@@ -271,9 +270,9 @@ const jsonLd = JSON.stringify({
         <section class="closing-cta" aria-labelledby="closing-title">
           <div class="closing-lines" aria-hidden="true"><span></span><span></span><span></span></div>
           <div class="closing-copy">
-            <h2 id="closing-title">Ready to make your store work harder?</h2>
-            <a class="pill-button" href={site.bookingUrl} data-cta-location="home-closing"><span>Book a free audit</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
-            <p>Bring one problem. We’ll agree on the scope before paid work begins.</p>
+            <h2 id="closing-title">Which leak is costing you the most right now?</h2>
+            <a class="pill-button" href={site.bookingUrl} data-cta-location="home-closing"><span>Book my free audit call</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" /></svg></span></a>
+            <p>Bring one problem. We rank the leaks we can see and tell you which to close first — yours to keep.</p>
           </div>
         </section>
 

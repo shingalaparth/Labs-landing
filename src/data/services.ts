@@ -20,9 +20,9 @@ export const serviceRoutes: readonly ServiceRoute[] = [
     navLabel: 'Store Conversion',
     navDescription: 'Turn more paid visits into orders.',
     title: 'Shopify conversion optimization.',
-    accent: 'Turn more visits into orders.',
+    accent: 'Stop paying twice for the same visit.',
     intro:
-      'We improve the pages, product discovery and cart decisions that sit between an expensive click and a completed Shopify order.',
+      'You already paid for the click. We work on the pages, product discovery and cart decisions sitting between that click and a completed Shopify order — the stretch you are currently paying for twice.',
     problemTitle: 'The leak is rarely “more traffic.” It is what happens after the click.',
     problemBody:
       'A visitor lands on the wrong product, misses the proof they need or reaches a cart that adds no useful next step. More spend only sends more people through the same gaps.',
@@ -38,9 +38,9 @@ export const serviceRoutes: readonly ServiceRoute[] = [
     navLabel: 'Order Operations',
     navDescription: 'Handle more orders with less firefighting.',
     title: 'COD confirmation & order automation.',
-    accent: 'Less chasing. Clearer handoffs.',
+    accent: 'Booked is not delivered.',
     intro:
-      'We connect order data, cash-on-delivery confirmation calls and failed-delivery follow-ups so your team can focus on exceptions instead of chasing every order.',
+      'We connect order data, cash-on-delivery confirmation calls and failed-delivery follow-ups, so your team spends the day on exceptions instead of chasing every order by hand.',
     problemTitle: 'Booked revenue is not delivered revenue.',
     problemBody:
       'Cash-on-delivery confirmations wait, failed-delivery follow-ups happen late, stock changes live in several places and people spend the day copying updates. The dashboard says growth while the team feels the drag.',
@@ -56,9 +56,9 @@ export const serviceRoutes: readonly ServiceRoute[] = [
     navLabel: 'AI & Marketing',
     navDescription: 'Keep brand knowledge ready for the next brief.',
     title: 'AI marketing workflow automation.',
-    accent: 'Start with your brand context.',
+    accent: 'Stop explaining your brand.',
     intro:
-      'Managed marketing puts the work into market. A structured AI workspace (your Claude Brain) keeps the approved brand context behind that work, so the next brief starts from what you already know.',
+      'Managed marketing puts the work into market. A structured AI workspace — your Claude Brain — keeps the approved brand context behind it, so the next brief starts from what your brand already learned instead of a blank chat.',
     problemTitle: 'The expensive part is not one task. It is explaining the brand again and again.',
     problemBody:
       'Customer insight sits in calls, creative lessons sit in ad accounts and positioning sits in somebody’s head. Each new campaign begins by rebuilding context that the business already paid to learn.',
