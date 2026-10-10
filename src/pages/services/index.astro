@@ -8,6 +8,8 @@ import { Approach } from '@/components/sections/Approach';
 import { Faq } from '@/components/sections/Faq';
 import { Contact } from '@/components/sections/Contact';
 import OperatingExperience from '@/components/ui/OperatingExperience.astro';
+import { audiences } from '@/data/audiences';
+import { ArrowIcon } from '@/components/ui/MagneticButton';
 import salesAgentBee from '../../../asset/individual-bees/04-shopify-sales-agent-no-name.png';
 ---
 <Layout>
@@ -26,6 +28,28 @@ import salesAgentBee from '../../../asset/individual-bees/04-shopify-sales-agent
   </section>
   <PlatformFamily />
   <Services />
+  <section id="who-its-for" class="audience-section section-space" aria-labelledby="who-its-for-title">
+    <div class="shell">
+      <div class="section-intro">
+        <span class="section-label"><span>02 /</span> Who it’s for</span>
+        <div>
+          <h2 id="who-its-for-title" class="section-title">Same building blocks.<br /><span class="muted-heading">Built around who you sell to.</span></h2>
+          <p class="section-description">Selling to shoppers and selling to other businesses leak in different places. Pick the page that matches how you sell — each shows the gaps we look for, what we build and whether we are a fit.</p>
+        </div>
+      </div>
+      <div class="service-route-grid audience-card-grid">
+        {audiences.map(audience => (
+          <a id={`for-${audience.id}`} href={`/services/${audience.slug}`} class="service-route-card">
+            <div class="service-top"><span>{audience.id.toUpperCase()}</span><span>{audience.label}</span></div>
+            <h3>{audience.navDescription}</h3>
+            <p>{audience.description.split('. ')[0]}.</p>
+            <ul aria-label={`${audience.label}: built for`}>{audience.builtFor.slice(0, 4).map(item => <li>{item}</li>)}</ul>
+            <span class="service-route-action">See the {audience.id.toUpperCase()} page <ArrowIcon /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
   <section id="proof" class="section-space growth-evidence">
     <div class="shell growth-split"><div><p class="eyebrow-accent">THE EXPERIENCE BEHIND THE WORK</p><h2 class="section-title">We know what happens<br /><span class="muted-heading">after the order comes in.</span></h2><p>We run seasonal products at Sanskrutibydiorin and daily jewellery operations at Diorin Demifine Jewellery. Same questions you have: what needs confirming, what is actually in stock, who handles the next exception, and why the dashboard says growth while the team is drowning.</p><p>These are our own brands, not independent client case studies. We use that operating experience to ask better questions about your business and scope the work around your real constraints — not a template.</p><a class="text-link" href="/about">Meet Mehul and see the approach ↗</a></div><OperatingExperience /></div>
   </section>

@@ -33,6 +33,18 @@ export const pageSeo: Record<string, PageSeo> = {
     "label": "AI marketing workflows",
     "type": "WebPage"
   },
+  "/services/b2c": {
+    "title": "Growth & Order Automation for B2C Brands",
+    "description": "For B2C and D2C brands: confirm COD orders, chase failed deliveries, fix the pages your ads land on and judge marketing on delivered orders.",
+    "label": "For B2C brands",
+    "type": "WebPage"
+  },
+  "/services/b2b": {
+    "title": "Sales & Order Automation for B2B Businesses",
+    "description": "For manufacturers, wholesalers and distributors: call back enquiries fast, capture dealer reorders, draft quotes from approved data and automate payment reminders.",
+    "label": "For B2B businesses",
+    "type": "WebPage"
+  },
   "/offers": {
     "title": "AI & Shopify Services: Pricing and Scope",
     "description": "Compare MLabs Shopify, order operations and AI workflow services. Explore the $5,000 USD pilot, deliverables, custom scope and free audit call.",

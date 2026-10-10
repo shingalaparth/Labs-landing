@@ -1050,3 +1050,47 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .blog-prose { font-size: 1rem; }
   .blog-prose table { display: block; overflow-x: auto; white-space: normal; }
 }
+
+/* /services/b2c and /services/b2b audience pages, and their cards on /services */
+.audience-hero-tags { margin-top: 2rem; }
+.audience-tags.audience-hero-tags li { background: transparent; border-color: rgba(255,255,255,.18); color: rgba(255,255,255,.72); }
+.audience-cta .text-link { margin-top: 1rem; }
+.audience-page .tool-faq h2 { max-width: 14ch; }
+.audience-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.audience-card-grid .service-route-card { min-height: 24rem; }
+.audience-section { border-top: 1px solid var(--line); }
+.audience-section--alt { background: var(--surface); }
+.audience-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.75rem; }
+.audience-tags li { padding: .45rem .75rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .78rem; color: #4a4b50; }
+.audience-section--alt .audience-tags li { background: var(--canvas); }
+.audience-leaks, .audience-builds { display: grid; gap: 1rem; margin-top: clamp(2.5rem, 5vw, 4rem); }
+.audience-leaks { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.audience-builds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.audience-leaks article, .audience-build { display: flex; min-width: 0; flex-direction: column; padding: clamp(1.4rem, 2.5vw, 2.25rem); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+.audience-section--alt .audience-leaks article, .audience-section--alt .audience-build { background: var(--canvas); }
+.audience-leaks article > span, .audience-build > span:first-child { font-size: .75rem; color: #807b6b; }
+.audience-leaks h3, .audience-build h3 { margin-top: 1.75rem; font-family: var(--font-display), sans-serif; font-size: clamp(1.25rem, 1.8vw, 1.6rem); font-weight: 600; line-height: 1.25; letter-spacing: -.04em; }
+.audience-leaks p, .audience-build p { margin-top: .9rem; font-size: .975rem; line-height: 1.75; color: #707178; }
+.audience-leaks .audience-check { margin-top: auto; padding-top: 1.25rem; border-top: 1px dashed var(--line); font-size: .875rem; color: #4a4b50; }
+.audience-leaks p:not(.audience-check) { margin-bottom: 1.25rem; }
+.audience-check strong { font-weight: 600; color: #131313; }
+.audience-research { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem; margin-top: 1.25rem; padding: 1rem 1.25rem; border-left: 3px solid #ffcc1e; background: var(--canvas); font-size: .9rem; line-height: 1.6; color: #4a4b50; }
+.audience-research a { display: inline-flex; align-items: center; min-height: 44px; font-size: .78rem; color: #707178; text-decoration: underline; text-underline-offset: 3px; }
+.audience-build { transition: transform .3s cubic-bezier(.22, 1, .36, 1), border-color .3s; }
+.audience-build:hover { transform: translateY(-3px); border-color: #c5bda3; }
+.audience-build-modules { margin-top: auto; padding-top: 1.25rem; font-size: .78rem; font-weight: 500; color: #131313; }
+.audience-build p { margin-bottom: 1.25rem; }
+.audience-note { margin-top: 1.25rem; font-size: .9rem; color: #707178; }
+.audience-close { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 5vw, 5rem); align-items: start; margin-top: clamp(2.5rem, 5vw, 4rem); }
+.audience-trust h3 { font-family: var(--font-display), sans-serif; font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 600; letter-spacing: -.04em; }
+.audience-trust p { max-width: 60ch; margin-top: .9rem; font-size: 1rem; line-height: 1.8; color: #707178; }
+.audience-close .service-fit { margin-top: 1.25rem; }
+.audience-section--alt .audience-close .service-fit { background: var(--canvas); }
+.audience-not-yet span { color: #707178; }
+.audience-cta p { font-size: 1.05rem; line-height: 1.75; color: #131313; }
+.audience-cta .growth-button { margin-top: 1.5rem; }
+.audience-cta .service-reducers { color: #707178; }
+.audience-section--alt .audience-cta { background: var(--canvas); }
+@media (max-width: 1080px) { .audience-leaks { grid-template-columns: 1fr; } }
+@media (max-width: 899px) { .audience-builds, .audience-close { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .audience-card-grid { grid-template-columns: 1fr; } .audience-card-grid .service-route-card { min-height: auto; } }

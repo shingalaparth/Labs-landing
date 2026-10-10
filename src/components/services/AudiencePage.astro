@@ -1,0 +1,161 @@
+---
+import { Approach } from '@/components/sections/Approach';
+import { Assurance } from '@/components/sections/Assurance';
+import { Contact } from '@/components/sections/Contact';
+import { ArrowIcon, MagneticButton } from '@/components/ui/MagneticButton';
+import Layout from '@/layouts/Layout.astro';
+import { audiences, type Audience } from '@/data/audiences';
+import { formatPilotPrice } from '@/data/offers';
+import { primaryCta, site } from '@/data/site';
+import { serviceRoutes } from '@/data/services';
+
+interface Props { audience: Audience }
+const { audience } = Astro.props;
+const other = audiences.find(item => item.id !== audience.id)!;
+const checkPrefix = 'Check it yourself:';
+---
+
+<Layout>
+  <div class="service-page audience-page">
+    <section class="service-hero" aria-labelledby="audience-title">
+      <div class="shell service-hero-inner">
+        <div class="service-hero-grid">
+          <div>
+            <p class="service-kicker"><span aria-hidden="true"></span>{audience.kicker}</p>
+            <h1 id="audience-title">{audience.headline}<br /><em>{audience.headlineMuted}</em></h1>
+            <ul class="audience-tags audience-hero-tags" aria-label="Built for">
+              {audience.builtFor.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+          <div class="service-hero-copy">
+            <p>{audience.description}</p>
+            <MagneticButton href={site.bookingUrl} variant="primary" strength={0.12} trackingLocation={`${audience.cta.trackingLocation}-hero`}>
+              {primaryCta.label} <ArrowIcon />
+            </MagneticButton>
+            <ul class="service-reducers" aria-label="What happens next">
+              {primaryCta.reducers.map(item => <li>{item}</li>)}
+            </ul>
+            <p class="service-booking-note">Choose a time on Calendly. The audit is free and you keep the ranked leak list; a focused implementation pilot is {formatPilotPrice()} USD. <a href="/offers">See scope and costs ↗</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience-section section-space" aria-labelledby="audience-leaks-title">
+      <div class="shell">
+        <div class="section-intro">
+          <span class="section-label"><span>01 /</span> {audience.leaksTitle}</span>
+          <div>
+            <h2 id="audience-leaks-title" class="section-title">Three gaps we see most.<br /><span class="muted-heading">Each one you can check today.</span></h2>
+            <p class="section-description">No industry averages here. Every gap ends with a check you can run on your own numbers before you speak to anyone.</p>
+          </div>
+        </div>
+        <div class="audience-leaks">
+          {audience.leaks.map((leak, index) => (
+            <article>
+              <span>0{index + 1}</span>
+              <h3>{leak.title}</h3>
+              <p>{leak.body}</p>
+              <p class="audience-check"><strong>{checkPrefix}</strong>{leak.check.slice(checkPrefix.length)}</p>
+            </article>
+          ))}
+        </div>
+        {audience.research && (
+          <p class="audience-research">
+            <span>“{audience.research.quote}”</span>
+            <a href={audience.research.url} target="_blank" rel="noopener noreferrer">{audience.research.source} ↗</a>
+          </p>
+        )}
+      </div>
+    </section>
+
+    <section class="audience-section audience-section--alt section-space" aria-labelledby="audience-build-title">
+      <div class="shell">
+        <div class="section-intro">
+          <span class="section-label"><span>02 /</span> What we build</span>
+          <div>
+            <h2 id="audience-build-title" class="section-title">{audience.useCasesTitle}.<br /><span class="muted-heading">One fixed scope at a time.</span></h2>
+            <p class="section-description">Each use case runs on one of our three services. Open any card to see that service in full: what we need from you, what your team receives and how it is measured.</p>
+          </div>
+        </div>
+        <div class="audience-builds">
+          {audience.useCases.map((useCase, index) => (
+            <a href={`/services/${useCase.serviceSlug}`} class="audience-build">
+              <span>0{index + 1}</span>
+              <h3>{useCase.title}</h3>
+              <p>{useCase.body}</p>
+              <span class="audience-build-modules">{useCase.modules} <span aria-hidden="true">↗</span></span>
+            </a>
+          ))}
+        </div>
+        {audience.useCasesNote && <p class="audience-note">{audience.useCasesNote}</p>}
+      </div>
+    </section>
+
+    <section class="audience-section section-space" aria-labelledby="audience-fit-title">
+      <div class="shell">
+        <div class="section-intro">
+          <span class="section-label"><span>03 /</span> Before you book</span>
+          <div>
+            <h2 id="audience-fit-title" class="section-title">Know if we fit<br /><span class="muted-heading">before the call, not after.</span></h2>
+          </div>
+        </div>
+        <div class="audience-close">
+          <div>
+            <div class="audience-trust">
+              <h3>{audience.trustTitle}</h3>
+              <p>{audience.trustLine}</p>
+              {audience.toolsLine && <p>{audience.toolsLine}</p>}
+            </div>
+            <div class="service-fit"><span>A good fit when</span><p>{audience.fit.yes}</p></div>
+            <div class="service-fit audience-not-yet"><span>Not yet if</span><p>{audience.fit.no}</p></div>
+          </div>
+          <div class="growth-card audience-cta">
+            <p>{audience.cta.microcopy}</p>
+            <a class="growth-button" href={site.bookingUrl} data-cta-location={audience.cta.trackingLocation}>{primaryCta.label} <span aria-hidden="true">↗</span></a>
+            <ul class="service-reducers" aria-label="What happens next">
+              {primaryCta.reducers.map(item => <li>{item}</li>)}
+            </ul>
+            <a class="text-link" href={site.whatsappUrl}>No suitable time? Message Mehul ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Approach focused sectionNumber="04" client:visible />
+    <Assurance showFitCriteria={false} sectionNumber="05" client:visible />
+
+    <section class="shell" aria-labelledby="audience-faq-title">
+      <div class="tool-faq">
+        <div>
+          <span class="section-label"><span>06 /</span> Straight answers</span>
+          <h2 id="audience-faq-title">Questions {audience.id === 'b2b' ? 'B2B teams' : 'B2C brands'} ask first.</h2>
+        </div>
+        <div>{audience.faqs.map(faq => <details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div>
+      </div>
+    </section>
+
+    <section class="related-services section-space" aria-labelledby="related-title">
+      <div class="shell">
+        <p class="eyebrow-accent">07 / The services behind this page</p>
+        <h2 id="related-title">See each piece in full.</h2>
+        <div class="related-service-grid">
+          {serviceRoutes.map(item => (
+            <a href={`/services/${item.slug}`}>
+              <span>{item.navLabel}</span>
+              <strong>{item.navDescription}</strong>
+              <ArrowIcon />
+            </a>
+          ))}
+          <a href={`/services/${other.slug}`}>
+            <span>{other.navLabel}</span>
+            <strong>{other.navDescription}</strong>
+            <ArrowIcon />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <Contact sectionNumber="08" />
+  </div>
+</Layout>

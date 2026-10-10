@@ -1,5 +1,6 @@
 ---
 import { serviceRoutes } from '@/data/services';
+import { audiences } from '@/data/audiences';
 import { tools } from '@/data/tools';
 import { site } from '@/data/site';
 ---
@@ -19,6 +20,9 @@ import { site } from '@/data/site';
             <a href="/services"><span>All services</span><small>Explore how we help your business grow.</small></a>
             {serviceRoutes.map((service) => (
               <a href={`/services/${service.slug}`}><span>{service.navLabel}</span><small>{service.navDescription}</small></a>
+            ))}
+            {audiences.map((audience) => (
+              <a href={`/services/${audience.slug}`}><span>{audience.navLabel}</span><small>{audience.navDescription}</small></a>
             ))}
           </div>
         </details>
@@ -54,6 +58,7 @@ import { site } from '@/data/site';
         <a href="/services">Services</a>
         <div class="hive-mobile-services">
           {serviceRoutes.map((service) => <a href={`/services/${service.slug}`}>{service.navLabel}</a>)}
+          {audiences.map((audience) => <a href={`/services/${audience.slug}`}>{audience.navLabel}</a>)}
         </div>
         <a href="/tools">Free tools</a>
         <div class="hive-mobile-services">

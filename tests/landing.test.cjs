@@ -284,3 +284,32 @@ test('campaign tags reach Calendly through internal navigation without copying u
   const override = new URL(attributedHref('/offers?utm_campaign=existing', page));
   assert.equal(override.searchParams.get('utm_campaign'), 'existing');
 });
+
+test('B2C and B2B pages invent no numbers, link real services and promise nothing unapproved', () => {
+  const { audiences } = loadSource('src/data/audiences.ts');
+  const { serviceRoutes } = loadSource('src/data/services.ts');
+  const slugs = serviceRoutes.map(service => service.slug);
+  assert.equal(audiences.map(audience => audience.id).join(','), 'b2c,b2b');
+  for (const audience of audiences) {
+    assert.ok(!slugs.includes(audience.slug), 'Audience page collides with a service page: ' + audience.slug);
+    assert.ok(fs.existsSync(path.join(__dirname, '..', 'src/pages/services', audience.slug + '.astro')), 'Missing page for ' + audience.slug);
+    assert.ok(audience.faqs.length >= 3, 'Too few FAQs on ' + audience.slug);
+  }
+  for (const audience of audiences) {
+    assert.equal(audience.leaks.length, 3);
+    for (const leak of audience.leaks) {
+      assert.ok(leak.check.startsWith('Check it yourself:'));
+      assert.doesNotMatch(leak.title + leak.body + leak.check, /\d+\s?%|\d+x\b/i, 'Unsourced statistic in ' + audience.id + ' leak');
+    }
+    for (const useCase of audience.useCases) assert.ok(slugs.includes(useCase.serviceSlug), 'Unknown service: ' + useCase.serviceSlug);
+    if (audience.research) {
+      assert.match(audience.research.url, /^https:\/\//);
+      assert.ok(audience.research.source.trim() && audience.research.quote.trim());
+    }
+    const { research, ...copy } = audience;
+    const text = JSON.stringify(copy).toLowerCase();
+    for (const phrase of ['money back', 'refund', 'guarantee', 'roi', 'double your', 'compliant', '%']) {
+      assert.ok(!text.includes(phrase), 'Unapproved claim in ' + audience.id + ': ' + phrase);
+    }
+  }
+});

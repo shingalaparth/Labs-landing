@@ -1,0 +1,8 @@
+---
+import AudiencePage from '@/components/services/AudiencePage.astro';
+import { audiences } from '@/data/audiences';
+
+const audience = audiences.find(item => item.id === 'b2b')!;
+---
+
+<AudiencePage audience={audience} />
