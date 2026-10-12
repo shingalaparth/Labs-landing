@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Holiday shipping deadline planning timeline</title>
+  <desc id="hero-desc">A timeline works backward from the carrier ship-by date through an operating buffer and fulfillment time to an earlier customer order-by date.</desc>
+  <defs>
+    <filter id="shadow" x="-15%" y="-20%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#1a1a1a" flood-opacity="0.10"/>
+    </filter>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4b8"/>
+      <stop offset="1" stop-color="#f3e1bd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#fffaf0"/>
+  <circle cx="1415" cy="80" r="290" fill="#ffe69a" opacity="0.82"/>
+  <circle cx="90" cy="860" r="250" fill="#f3e1bd" opacity="0.85"/>
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif">
+    <line x1="78" y1="120" x2="112" y2="120" stroke="#d4aa24" stroke-width="4"/>
+    <text x="130" y="128" font-size="22" font-weight="700" letter-spacing="3" fill="#6b5400">2026 HOLIDAY SHIPPING</text>
+    <text x="78" y="232" font-size="78" font-weight="750" letter-spacing="-2.5" fill="#1a1a1a">The carrier cutoff</text>
+    <text x="78" y="320" font-size="78" font-weight="750" letter-spacing="-2.5" fill="#6b5400">is not your promise.</text>
+    <text x="82" y="380" font-size="27" fill="#5b513b">Work backward before the parcel reaches the carrier.</text>
+
+    <g filter="url(#shadow)">
+      <rect x="78" y="455" width="1444" height="272" rx="28" fill="#ffffff" stroke="#e4d29b" stroke-width="2"/>
+    </g>
+    <line x1="208" y1="610" x2="1392" y2="610" stroke="#e4d29b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M1392 610 L1358 588 M1392 610 L1358 632" fill="none" stroke="#d4aa24" stroke-width="10" stroke-linecap="round"/>
+
+    <g>
+      <circle cx="250" cy="610" r="32" fill="#1a1a1a"/>
+      <text x="250" y="620" text-anchor="middle" font-size="28" font-weight="800" fill="#fffaf0">1</text>
+      <text x="250" y="535" text-anchor="middle" font-size="25" font-weight="750" fill="#1a1a1a">Customer order-by</text>
+      <text x="250" y="680" text-anchor="middle" font-size="20" fill="#5b513b">Publish this date</text>
+    </g>
+    <g>
+      <circle cx="620" cy="610" r="32" fill="#f2ce5b"/>
+      <text x="620" y="620" text-anchor="middle" font-size="28" font-weight="800" fill="#1a1a1a">2</text>
+      <text x="620" y="535" text-anchor="middle" font-size="25" font-weight="750" fill="#1a1a1a">Fulfillment time</text>
+      <text x="620" y="680" text-anchor="middle" font-size="20" fill="#5b513b">Pick, pack, label</text>
+    </g>
+    <g>
+      <circle cx="990" cy="610" r="32" fill="#f2ce5b"/>
+      <text x="990" y="620" text-anchor="middle" font-size="28" font-weight="800" fill="#1a1a1a">3</text>
+      <text x="990" y="535" text-anchor="middle" font-size="25" font-weight="750" fill="#1a1a1a">Operating buffer</text>
+      <text x="990" y="680" text-anchor="middle" font-size="20" fill="#5b513b">Exceptions and pickups</text>
+    </g>
+    <g>
+      <circle cx="1360" cy="610" r="32" fill="#6b5400"/>
+      <text x="1360" y="620" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">4</text>
+      <text x="1360" y="535" text-anchor="middle" font-size="25" font-weight="750" fill="#1a1a1a">Carrier ship-by</text>
+      <text x="1360" y="680" text-anchor="middle" font-size="20" fill="#5b513b">Transit starts here</text>
+    </g>
+
+    <rect x="490" y="776" width="620" height="58" rx="29" fill="url(#warm)" stroke="#e4d29b"/>
+    <text x="800" y="813" text-anchor="middle" font-size="22" font-weight="700" fill="#5b513b">Order-by = ship-by - fulfillment - buffer</text>
+  </g>
+</svg>
