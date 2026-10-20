@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative free shipping threshold calculation</title>
+  <desc id="desc">A four-stage flow adds the contribution needed to fund shipping to current average order value, then checks the resulting threshold.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="100" y="115" font-size="54" font-weight="700">Illustrative threshold calculation</text>
+    <text x="100" y="168" font-size="26" fill="#707178">Currency-neutral example. Replace every input with your delivered-order economics.</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(100 275)">
+      <rect width="300" height="270" rx="26" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="54" cy="56" r="28" fill="#facc15"/>
+      <text x="45" y="66" font-size="28" font-weight="700" fill="#131313">A</text>
+      <text x="34" y="126" font-size="25" fill="#707178">CURRENT AOV</text>
+      <text x="34" y="202" font-size="68" font-weight="700" fill="#131313">60</text>
+      <text x="34" y="242" font-size="22" fill="#707178">currency units</text>
+    </g>
+    <path d="M420 410H490" stroke="#707178" stroke-width="5"/>
+    <path d="M473 395L490 410L473 425" fill="none" stroke="#707178" stroke-width="5"/>
+    <g transform="translate(510 275)">
+      <rect width="300" height="270" rx="26" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="54" cy="56" r="28" fill="#facc15"/>
+      <text x="45" y="66" font-size="28" font-weight="700" fill="#131313">B</text>
+      <text x="34" y="126" font-size="25" fill="#707178">SHIP SUBSIDY</text>
+      <text x="34" y="202" font-size="68" font-weight="700" fill="#131313">8</text>
+      <text x="34" y="242" font-size="22" fill="#707178">currency units</text>
+    </g>
+    <path d="M830 410H900" stroke="#707178" stroke-width="5"/>
+    <path d="M883 395L900 410L883 425" fill="none" stroke="#707178" stroke-width="5"/>
+    <g transform="translate(920 275)">
+      <rect width="300" height="270" rx="26" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+      <circle cx="54" cy="56" r="28" fill="#facc15"/>
+      <text x="45" y="66" font-size="28" font-weight="700" fill="#131313">C</text>
+      <text x="34" y="126" font-size="25" fill="#707178">CONTRIBUTION</text>
+      <text x="34" y="202" font-size="68" font-weight="700" fill="#131313">40%</text>
+      <text x="34" y="242" font-size="22" fill="#707178">on likely add-ons</text>
+    </g>
+    <path d="M1240 410H1310" stroke="#707178" stroke-width="5"/>
+    <path d="M1293 395L1310 410L1293 425" fill="none" stroke="#707178" stroke-width="5"/>
+    <g transform="translate(1330 275)">
+      <rect width="170" height="270" rx="26" fill="#facc15" stroke="#131313" stroke-width="4"/>
+      <text x="28" y="126" font-size="25" fill="#131313">GAP</text>
+      <text x="28" y="202" font-size="68" font-weight="700" fill="#131313">20</text>
+      <text x="28" y="242" font-size="22" fill="#131313">8 ÷ 40%</text>
+    </g>
+    <rect x="100" y="645" width="1400" height="145" rx="28" fill="#131313"/>
+    <text x="150" y="705" font-size="28" fill="#f6f5f1">STARTING THRESHOLD</text>
+    <text x="150" y="765" font-size="48" font-weight="700" fill="#facc15">60 + 20 = 80 currency units</text>
+    <text x="900" y="732" font-size="25" fill="#f6f5f1">Next check:</text>
+    <text x="900" y="770" font-size="28" font-weight="700" fill="#f6f5f1">Does contribution per visitor rise?</text>
+  </g>
+</svg>

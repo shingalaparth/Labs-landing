@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Free shipping threshold and profit guardrail</title>
+  <desc id="desc">A cart value line crosses a highlighted free shipping threshold while a profit guardrail remains protected below it.</desc>
+  <rect width="1600" height="900" fill="#f6f5f1"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="120" y="150" font-size="30" font-weight="700" letter-spacing="3">PROFIT-FIRST STORE RULE</text>
+    <text x="120" y="240" font-size="68" font-weight="700">Free shipping threshold</text>
+    <text x="120" y="300" font-size="30" fill="#707178">Make the larger basket pay for the delivery promise.</text>
+  </g>
+  <rect x="120" y="400" width="1360" height="18" rx="9" fill="#707178" opacity="0.25"/>
+  <rect x="120" y="400" width="930" height="18" rx="9" fill="#131313"/>
+  <circle cx="1050" cy="409" r="38" fill="#facc15" stroke="#131313" stroke-width="6"/>
+  <path d="M1050 371V330" stroke="#131313" stroke-width="5"/>
+  <g font-family="Inter, Arial, sans-serif" fill="#131313">
+    <text x="120" y="480" font-size="28" font-weight="700">CURRENT CART VALUE</text>
+    <text x="882" y="480" font-size="28" font-weight="700">THRESHOLD</text>
+  </g>
+  <g transform="translate(120 575)">
+    <rect width="390" height="170" rx="24" fill="#f6f5f1" stroke="#131313" stroke-width="4"/>
+    <text x="34" y="58" font-family="Inter, Arial, sans-serif" font-size="26" fill="#707178">INPUT</text>
+    <text x="34" y="108" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#131313">Average order value</text>
+    <text x="34" y="145" font-family="Inter, Arial, sans-serif" font-size="24" fill="#707178">What shoppers spend now</text>
+  </g>
+  <path d="M535 660H620" stroke="#707178" stroke-width="5" stroke-linecap="round"/>
+  <path d="M603 645L620 660L603 675" fill="none" stroke="#707178" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(645 575)">
+    <rect width="390" height="170" rx="24" fill="#facc15" stroke="#131313" stroke-width="4"/>
+    <text x="34" y="58" font-family="Inter, Arial, sans-serif" font-size="26" fill="#131313">ADD</text>
+    <text x="34" y="108" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#131313">Margin-funded gap</text>
+    <text x="34" y="145" font-family="Inter, Arial, sans-serif" font-size="24" fill="#131313">Subsidy ÷ contribution rate</text>
+  </g>
+  <path d="M1060 660H1145" stroke="#707178" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1128 645L1145 660L1128 675" fill="none" stroke="#707178" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(1170 575)">
+    <rect width="310" height="170" rx="24" fill="#131313"/>
+    <text x="34" y="58" font-family="Inter, Arial, sans-serif" font-size="26" fill="#facc15">CHECK</text>
+    <text x="34" y="108" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#f6f5f1">Profit stays</text>
+    <text x="34" y="145" font-family="Inter, Arial, sans-serif" font-size="24" fill="#f6f5f1">after delivery</text>
+  </g>
+</svg>
